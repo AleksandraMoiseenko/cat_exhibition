@@ -249,32 +249,7 @@ public class Cat {
 		}
 		return updateCatList;
 	}
-
-	/*
-	 * public static HashMap<Integer, Cat> updateCatId(HashMap<Integer, Cat>
-	 * catlist, int old_id, int new_id) throws IOException { HashMap<Integer, Cat>
-	 * updateCatList = new HashMap<Integer, Cat>(); if(catlist.containsKey(new_id))
-	 * { System.out.
-	 * println("Cat with this id has already exist. Please change new id number.");
-	 * }else { Cat buffer=null; for (Map.Entry<Integer, Cat> cat :
-	 * catlist.entrySet()) { if(cat.getKey()==old_id) buffer=new
-	 * Cat(cat.getValue().getName(),cat.getValue().getFood(),cat.getValue().getBreed
-	 * (),cat.getValue().getOwners());
-	 * 
-	 * updateCatList.put(new_id, buffer); } catlist.remove(old_id);
-	 * 
-	 * updateCatList.putAll(catlist); for (Map.Entry<Integer, Cat> cat :
-	 * updateCatList.entrySet()) { System.out.println("Exhibition number: " +
-	 * cat.getKey()); cat.getValue().printcatinfo();
-	 * writeUsingOutputStream("Exhibition number: " + cat.getKey());
-	 * writeUsingOutputStream(cat.getValue().getName());
-	 * writeUsingOutputStream(cat.getValue().getBreed());
-	 * writeUsingOutputStream(cat.getValue().getFood()); for (Human owner :
-	 * cat.getValue().getOwners()) { writeUsingOutputStream(owner.getName());
-	 * writeUsingOutputStream(owner.getLast_name());
-	 * writeUsingOutputStream(owner.getAddress()); } } //return updateCatList; }
-	 * return updateCatList; }
-	 */
+	
 	public static HashMap<Integer, Cat> updateCatOwnersName(HashMap<Integer, Cat> catlist, int id,
 			HashSet<Human> owners, String last_name, String name) throws IOException {// update cat owners by id(if cat was bought after the exhibition)
 		HashMap<Integer, Cat> updateCatList = new HashMap<Integer, Cat>();
