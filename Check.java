@@ -41,7 +41,6 @@ public class Check {
 		Cat.updateCatAddress(cat_exh, 2, "SPb");
 		Cat.updateCatFood(cat_exh, 1, "Kittycat");
 		// Cat.writeUsingInputStream();
-		// Cat.updateCatId(cat_exh, 3, 5);
 		Cat.deletecat(cat_exh, 1);
 
 		for (Map.Entry<Integer, Cat> cat : cat_exh.entrySet()) {
